@@ -1,0 +1,252 @@
+*{
+	font-family: monospace;
+}
+body{
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+
+}
+img{
+	width: auto;
+	height: 100%;
+}
+header{
+	height: 3.5em;
+	width: auto;
+	background-color:  white;
+	display: flex;
+}
+header ul{
+	display: inline-flex;
+	right: 0.25em;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 3.5em;
+	position: absolute;
+}
+header li{
+	display: inline-grid;
+	grid-template-columns: 0.2fr 0.2fr 0.2fr;
+	padding-left: 5%;
+	padding-right: 5%;
+	background-color:  white ;
+	height: 100%;
+}
+header li:hover{
+	background-color: #4775d1;
+}
+header li a{
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 100%;
+	color:#4775d1;
+	font-weight: bold;
+}
+header li a:hover{
+	color: white;
+}
+header img{
+	position: relative;
+	left: 0.5em;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+@media (min-width: 600px){
+	header img{
+		left: 1.5em;
+	}
+	header li a{
+	font-size: 120%;
+}
+}
+#ABOUT{
+	display: flex;
+	flex-direction: row;
+	background-color: #4775d1;
+	height: auto;
+	width: auto;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+#ABOUT img{
+	opacity: 1;
+	position: relative;
+	right:0.15em;
+
+}
+#img-sec{
+	background-color: #3366cc;
+	width:13em;
+	height: 13em;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 100%;
+	overflow: hidden;
+	margin-bottom: 1em;
+	box-shadow: 0 0 15px black;
+	margin-top: 1em;
+}
+
+#info{
+	background-color: ;
+	margin:0;
+	width: auto;
+	padding-left: 1em;
+	padding-right:1em;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 2em;
+	padding-left: 2em;
+	font-size: 100%;
+	word-wrap: normal;
+	margin-top: auto;
+	margin-bottom: auto;
+	color: white;
+	text-shadow: 0 0 15px black;
+	word-break: normal;
+}
+
+@media (max-width: 600px) {
+  main section {
+    flex-direction: column;
+  }
+  #ABOUT { display: flex; flex-direction: column; }
+	#img-sec { order: 1; }
+	#info { order: 2; }
+
+  #info {
+    width: auto;
+    font-size: 85%;
+    margin-left: unset;
+    margin-right: unset;
+    margin-bottom: 1.5em;
+  }
+  #cert h2{
+  	font-size: 120%;
+  }
+}
+@media (min-width: 850px){
+	#img-sec{
+		width:17em;
+		height: 17em;
+		margin-bottom: 2em;
+	}
+	#info{
+		font-size: 120%;
+	}
+}
+#cert{
+	text-align: center;
+	margin: 0;
+	/*padding-top: 1em;*/
+	padding-bottom: 10%;
+}
+#cert h2{
+	border:0.3em #4775d1 solid;
+	margin: 0;
+	margin-bottom: 1em;
+	width: 10em;
+	margin-right: auto;
+	margin-left: auto;
+	color: white;
+	border-radius: 0 0 1em 1em;
+	border-top: 0;
+	background-color: #4775d1;
+}
+#CONTACTS{
+	background-color: #4775d1;
+	text-align: center;
+	padding-bottom: 10%;
+}
+#CONTACTS h2{
+	border:0.3em white solid;
+	margin: 0;
+	margin-bottom: 1em;
+	width: 10em;
+	color: #4775d1;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 0 0 1em 1em;
+	border-top: 0;
+	background-color: white;
+}
+@media (max-width: 600px){
+	#CONTACTS h2{
+		width: 8em;
+	}
+}
+#social{
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	color: #1a1a1a;
+	font-weight: bold;
+	border: 5px white solid;
+	border-radius: 0.75em;
+	width: auto;
+	height: 7em;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	box-shadow: 0 0 10px black;
+	margin-left: 7%;
+	margin-right: 7%;
+	min-width: 22em;
+	max-width: 25em;
+
+}
+#social p{
+	margin: auto;
+	font-size: 110%;
+}
+#img-container-social{
+	width: auto;
+	height: auto;
+	margin: auto;
+}
+#img-container-social img{
+	width: 70%;
+	height: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+#social-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 3em;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+}
+#social-grid a{
+	margin-right: auto;
+	margin-left: auto;
+}
+@media (max-width: 700px){
+	#social-grid{
+	display: flex;
+	flex-direction:column;}
+	#social{
+	}
+}
+
+
+footer{
+	background-color: white;
+	width:100%;
+	height: 100%;
+	padding: 1em 0 1em 1.75em;
+}
+footer p{
+	margin: 0;
+}
+footer p span{
+	font-weight: bolder;
+	font-size: 110%;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Zriouile Oussama</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" href="images/icon.jpg">
+	<style>
+      * {box-sizing: border-box}
+      body {font-family: Verdana, sans-serif; margin:0}
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 65%;
+        position: relative;
+        margin: auto;
+        margin-top: 10%;
+
+        box-shadow: 0 0 10px black;
+      }
+      @media (max-width: 600px){
+      	.slideshow-container {
+        max-width: 85%; }
+      }
+      /* Next & previous buttons */
+      .prev, .next {
+         cursor: pointer;
+         position: absolute;
+         top: 50%;
+         width: auto;
+         padding: 16px;
+         margin-top: -22px;
+         color: black;
+         font-weight: bold;
+         font-size: 18px;
+         transition: 0.6s ease;
+         border-radius: 0 4px 4px 0;
+         user-select: none;
+      }
+      /* Position the "next button" to the right */
+      .next {
+         right: 0;
+         border-radius: 10px 0 0 10px;
+      }
+       .prev {
+         left: 0;
+         border-radius: 0px 10px 10px 0px;
+      }
+      /* On hover, add a black background color with a little bit seethrough */
+      .prev:hover, .next:hover {
+         background-color: rgba(0,0,0,0.8);
+      }
+      /* Caption text */
+      .text {
+         color: black;
+         font-size: 15px;
+         padding: 8px 12px;
+         position: absolute;
+         bottom: 8px;
+         width: 100%;
+         text-align: center;
+      }
+    
+      /* The dots/bullets/indicators */
+      .dot {
+         cursor: pointer;
+         height: 15px;
+         width: 15px;
+         margin: 0 2px;
+         background-color: #bbb;
+         border-radius: 50%;
+         display: inline-block;
+         transition: background-color 0.6s ease;
+        margin-bottom: 1em;
+
+      }
+      .active, .dot:hover {
+         background-color: #717171;
+      }
+   </style>
+</head>
+<body>
+	<header>
+		<img style="height: 70%;" src="images/logo.png">
+		<ul>
+			<li><a href="#About">ABOUT</a></li>
+			<li><a href="#cert">CERTIFICATES</a></li>
+			<li><a href="#CONTACTS">CONTACTS</a></li>
+		</ul>
+	</header>
+	<main>
+		<section  id="ABOUT">
+			
+			<div id="info">
+				<H2>< HI ! ></H2>
+				<h1 id="name"> < I AM OUSSAMA ZRIOUILE ></h1>
+				<h2> < I am a ghraphic and web designer ></h2>
+				<h2> < I am a from Morocco ></h2>
+			</div>
+			<div id="img-sec">
+				<img src="images/me.jpg">
+			</div>
+		</section>
+		<section id="cert">
+			<h2 >CERTIFICATES</h2>
+			<div class="slideshow-container">
+      <div class="mySlides fade">
+         <img src="images/01.jpg" style="width:100%">
+         </div>
+         <div class="mySlides fade">
+          
+            <img src="images/02.jpg" style="width:100%;">
+         </div>
+         <div class="mySlides fade">
+           
+            <img src="images/03.jpg" style="width:100%">
+         </div>
+         <div class="mySlides fade">
+       
+            <img src="images/04.jpg" style="width:100%">
+         </div>
+         <a class="prev" onclick="plusSlides(-1)">❮</a>
+         <a class="next" onclick="plusSlides(1)">❯</a>
+   </div>
+   <br>
+   <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+   </div>
+		</section>
+		<section id="CONTACTS">
+			<h2>CONTACTS</h2>
+			<dev id="social-grid">
+				<a href="mailto:name@rapidtables.com">
+				<div id="social">
+					<div id="img-container-social">
+					<img src="images/gmail.png"></div>
+					<p>zriouileoussama1@gmail.com</p>
+				</div></a>
+				<a href="https://www.linkedin.com/in/oussama-zriouile-378939202/" target="_blank">
+				<div id="social">
+					<div id="img-container-social"><img src="images/linkedin.png"></div>
+					<p>Oussama Zriouile</p>
+				</div>
+				</a>
+				<a href="https://www.facebook.com/profile.php?id=100016839669387" target="_blank">
+				<div id="social">
+					<div id="img-container-social"><img src="images/facebook.png"></div>
+					<p>Oussama Zriouile</p>
+				</div>
+				</a>
+				<a href="https://www.instagram.com/zriouile_oussama/" target="_blank">
+				<div id="social">
+					<div id="img-container-social"><img src="images/instagram.png"></div>
+					<p>oussama_zriouile</p>
+				</div>
+				</a>
+			</dev>
+		</section>
+
+	</main>
+	<footer>
+		<p>designed by <span>OSM ZRL</span>. All rights reserved 2022</p>
+	</footer>
+	<script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+         showSlides(slideIndex += n);
+      }
+      function currentSlide(n) {
+         showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+         var i;
+         var slides = document.getElementsByClassName("mySlides");
+         var dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+         }
+         for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+      }
+   </script>
+</body>
+</html>
